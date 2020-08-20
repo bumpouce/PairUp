@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import AuthHOC from '../HOC/AuthHOC'
 import Stats from './Stats'
-import LineGraph from './LineGraph'
+// import LineGraph from './LineGraph'
 const URL = `https://pairup-game.herokuapp.com`
 
 export class UserHome extends Component {
