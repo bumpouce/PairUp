@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import AuthHOC from '../HOC/AuthHOC'
+const URL = `https://pairup-game.herokuapp.com`
+
 export class Leaderboard extends Component {
     state={
         scores: {}
     }
     componentDidMount(){
-        fetch('http://localhost:3000/api/v1/high_scores', {
+        // fetch('http://localhost:3000/api/v1/high_scores', {
+        fetch(`${URL}/api/v1/high_scores`, {
             method: 'GET',
             headers: {
               Authorization: `Bearer ${ localStorage.getItem('token')}`
@@ -17,7 +20,7 @@ export class Leaderboard extends Component {
     makeScoresPretty(difficulty){
     return  this.state.scores[difficulty].map((score,i )=><li key={i}> 
         <mark>
-            <img className= "flag" src={`./Flags/${score.user.country}.png`}></img>
+            <img className= "flag" src={`./Flags/${score.user.country}.png`} alt={`${score.user.country} flag`}></img>
             <span className="username">{`${score.user.username}`}</span>
             </mark>
         <small>{score.user_game.score}</small>

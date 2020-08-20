@@ -5,6 +5,7 @@ import { Container, Jumbotron} from 'react-bootstrap'
 import {tiles } from '../data.js'
 import '../App.css';
 import Cell from './Cell.js'
+const URL = "https://pairup-game.herokuapp.com"
 
 const INITIAL_STATE = {
     board: tiles[0],
@@ -31,7 +32,8 @@ class Game extends Component {
     postNewUserGame = () => {
         let token = localStorage.getItem('token');
 
-        fetch('http://localhost:3000/api/v1/newgame', {
+        // fetch('http://localhost:3000/api/v1/newgame', {
+        fetch(`${URL}/api/v1/newgame`, { 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -53,7 +55,8 @@ class Game extends Component {
         let user_game = JSON.parse(localStorage.getItem('user_game'))
         user_game.score = this.state.score                          // multiplier?
         user_game.time = this.state.time                                       // difficulty time - leftover timer time
-        fetch('http://localhost:3000/api/v1/updategame', {
+        // fetch('http://localhost:3000/api/v1/updategame', {
+        fetch(`${URL}/api/v1/newgame`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',

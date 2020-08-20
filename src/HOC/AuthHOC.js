@@ -1,4 +1,5 @@
 import React from "react";
+const URL = `https://pairup-game.herokuapp.com`
 
 const AuthHOC = WrappedComponent => {
 
@@ -17,7 +18,8 @@ const AuthHOC = WrappedComponent => {
       if (!localStorage.getItem("token")) {
         this.props.history.push("/login")
       } else {
-        fetch(`http://localhost:3000/check_user`, {
+        // fetch(`http://localhost:3000/check_user`, {
+          fetch(`${URL}/check_user`, {
             headers:
         { "Content-Type": "application/json",
         Accept: "application/json",

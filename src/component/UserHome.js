@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import AuthHOC from '../HOC/AuthHOC'
 import Stats from './Stats'
 import LineGraph from './LineGraph'
+const URL = `https://pairup-game.herokuapp.com`
 
 export class UserHome extends Component {
 
@@ -13,7 +14,8 @@ export class UserHome extends Component {
 	}
 
 	componentDidMount() {
-		fetch('http://localhost:3000/api/v1/user_high_scores', {
+		// fetch('http://localhost:3000/api/v1/user_high_scores', {
+		fetch(`${URL}/api/v1/user_high_scores`, {
 			method: 'GET',
 			headers: {
 				Authorization: `Bearer ${localStorage.getItem('token')}`

@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import avatar from '../images/avatar.png'
+const URL = `https://pairup-game.herokuapp.com`
 
 export class Login extends Component {
 
@@ -18,7 +19,8 @@ export class Login extends Component {
     handleLogin = (event) => {
         event.preventDefault()
         const { nameLogin, passwordLogin } = this.state
-        fetch('http://localhost:3000/api/v1/login', {
+        // fetch('http://localhost:3000/api/v1/login', {
+        fetch(`${URL}/api/v1/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -41,7 +43,8 @@ export class Login extends Component {
     handleCreateUser = (event) => {
         event.preventDefault()
         const { nameSignup, passwordSignup, countrySignup, avatarSignup } = this.state
-        fetch('http://localhost:3000/api/v1/users', {
+        // fetch('http://localhost:3000/api/v1/users', {
+        fetch(`${URL}/api/v1/users`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
