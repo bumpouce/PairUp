@@ -18,7 +18,7 @@ const ModalComp = (props) => {
         else if (visible && sound){
         play1()
         }
-    }, [visible])
+    }, visible)
 
         return (
             <Modal displayClassName="modal" show={visible} width="400" height="800">
