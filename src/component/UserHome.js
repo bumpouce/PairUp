@@ -85,7 +85,7 @@ export class UserHome extends Component {
 						{ this.state.scores.hard ? <Stats scores={this.state.scores}/> : null}
 						</div>
 						<div className="col">
-						{ this.state.scores.hard ? <LineGraph scores={this.state.scores.all}/> : null}
+						{/* { this.state.scores.hard ? <LineGraph scores={this.state.scores.all}/> : null} */}
 						</div>
 					</div>
 				</section>

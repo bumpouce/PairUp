@@ -56,7 +56,7 @@ class Game extends Component {
         user_game.score = this.state.score                          // multiplier?
         user_game.time = this.state.time                                       // difficulty time - leftover timer time
         // fetch('http://localhost:3000/api/v1/updategame', {
-        fetch(`${URL}/api/v1/newgame`, {
+        fetch(`${URL}/api/v1/updategame`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ class Game extends Component {
                 <div className="col text-center" >
                 <h2 className="game-text"> Time Left:</h2>
                 <div className="col text-center counter" >
-                    {(this.state.timesUp) ? null : <ReactCountdownClock seconds={this.state.difficulty} color="#60a3bc" alpha={0.9} size={200} onComplete={this.gameEndsWithTimeOut} /> }
+                    {(this.state.timesUp) ? null : <ReactCountdownClock seconds={this.state.difficulty} color={"#60a3bc"} alpha={0.9} size={200} onComplete={this.gameEndsWithTimeOut} /> }
                 </div>
                     <h2 className="game-text"> Pairs Matched: {this.state.score}</h2>
                 </div>

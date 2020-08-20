@@ -34,7 +34,7 @@ export class Form extends Component {
             <div className="game-form text-center">
                 <h1>How Would You Like to Play?</h1>
                 <hr/>
-                    <div class="form-group">
+                    <div className="form-group">
                     <label>Choose Tile Set:</label>
                     <select name="tiles" onChange={(event) => this.handleTiles(event)}>
                         <option value="colors">Colors</option>
@@ -42,7 +42,7 @@ export class Form extends Component {
                         <option value="emoties">Emoties</option>
                     </select>
                     </div>
-                    <div class="form-group">
+                    <div className="form-group">
                     <label>Choose the Game Difficulty:</label>
                     <select name="time" onChange={(event) => this.handleChange(event)}>
                         <option value="Easy">Easy</option>
@@ -50,7 +50,7 @@ export class Form extends Component {
                         <option value="Hard">Hard</option>
                     </select>
                     </div>
-                    <div class="form-group">
+                    <div className="form-group">
                     <label>Choose the Game Board Size:</label>
                     <select name="time" onChange={(event) => this.handleNumber(event)}>
                         <option value="8">8</option>
@@ -58,15 +58,15 @@ export class Form extends Component {
                         <option value="20">20</option>
                     </select>
                     </div>
-                    <div class="form-group">
+                    <div className="form-group">
                     <label>Play with Sounds?</label>
-                    <label class="switch">
+                    <label className="switch">
                         <input type="checkbox" defaultChecked onChange={this.handleSound}/>
-                            <span class="slider round"></span>
+                            <span className="slider round"></span>
                     </label>
                     </div>
                     <hr/>
-                    <div class="form-group">
+                    <div className="form-group">
                             <Button variant="primary" onClick={(event) => this.handleSubmit(event)}>Start Game!</Button>
                         </div>
                 </div>

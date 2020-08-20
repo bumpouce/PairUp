@@ -21,7 +21,7 @@ const ModalComp = (props) => {
     }, [visible, play, play1, sound, win])
 
         return (
-            <Modal displayClassName="modal" show={visible} width="400" height="800">
+            <Modal displayclassname="modal" show={visible} width="400" height="800">
             <div className="win">
                 {win?<h1>You Won!</h1>:<h1>Oh No! Too Slow!</h1>}
                 {win?<img width="200" src={trophy} alt="win" />:null}

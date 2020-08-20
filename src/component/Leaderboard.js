@@ -28,7 +28,7 @@ export class Leaderboard extends Component {
 
     }
     render() {
-        return (
+         return (
             <div className="container">
                 <section id="our-stats">
                     <h2 className="text-green h1 text-center">Leaderboards</h2>
