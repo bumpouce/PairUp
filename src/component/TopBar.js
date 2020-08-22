@@ -21,8 +21,6 @@ export class TopBar extends Component {
                {this.props.user? <Navbar.Text onClick={()=>this.handleLogout()}>Logout</Navbar.Text>: null}
               </Nav>
           </Navbar>
-          {/* <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links --> */}
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
           </Fragment>
         )
     }
