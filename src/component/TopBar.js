@@ -11,7 +11,6 @@ export class TopBar extends Component {
     render() {
         return (
           <Fragment>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
             <Navbar expand="lg">
             <Navbar.Brand href="/home" className="navbar-left"><img id="logo" src={logo} alt='PairUp!'/></Navbar.Brand>
               <Nav className="mr-auto">
@@ -23,9 +22,7 @@ export class TopBar extends Component {
               </Nav>
           </Navbar>
           {/* <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links --> */}
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
           </Fragment>
         )
     }
